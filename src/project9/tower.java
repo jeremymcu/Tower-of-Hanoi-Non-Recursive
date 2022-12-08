@@ -46,10 +46,11 @@ public class tower {
                 else if (stack3.size() < num)
                     stack1.push(stack2.pop());
 
+                print(num, stack1, stack2, stack3);
+
                 if(stack1.isEmpty() && stack2.isEmpty())
                     break;
 
-                print(num, stack1, stack2, stack3);
                 System.out.println("Step number: " + ++step);
 
                 if (!stack1.isEmpty() && (stack3.isEmpty() || stack1.peek() < stack3.peek()))
@@ -63,6 +64,10 @@ public class tower {
                     stack1.push(stack3.pop());
 
                 print(num, stack1, stack2, stack3);
+
+                if(stack1.isEmpty() && stack2.isEmpty())
+                    break;
+
                 System.out.println("Step number: " + ++step);
 
                 if (!stack1.isEmpty() && (stack2.isEmpty() || stack1.peek() < stack2.peek()))
@@ -71,10 +76,11 @@ public class tower {
                     stack1.push(stack2.pop());
             }
 
+            print(num, stack1, stack2, stack3);
+
             if(stack1.isEmpty() && stack2.isEmpty())
                 break;
 
-            print(num, stack1, stack2, stack3);
             System.out.println("Step number: " + ++step);
             if (!stack2.isEmpty() && (stack3.isEmpty() || stack2.peek() < stack3.peek()))
                 stack3.push(stack2.pop());
