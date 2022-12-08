@@ -34,6 +34,10 @@ public class tower {
             if (!temp3.isEmpty())
                 stack3.push(temp3.pop());
         }
+
+        for (int i=0; i<33; i++)
+            System.out.print("-");
+        System.out.println("\n");
     }
 
     void hanoi(int num, Stack<Integer> stack1, Stack<Integer> stack2, Stack<Integer> stack3){
